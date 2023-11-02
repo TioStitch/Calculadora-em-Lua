@@ -1,22 +1,22 @@
 local function startCalculator()
-    local prefixo = "[Calculadora]"
+    local prefixo = "[Calculadora] "
 
-    print("Por favor, insira o primeiro valor:")
+    print(prefixo .. "Por favor, insira o primeiro valor:")
 
     local valor1 = io.read()
-    print("Primeiro valor: " .. valor1)
+    print(prefixo .. "Primeiro valor: " .. valor1)
     
-    print("Por favor, insira o segundo valor:")
+    print(prefixo .. "Por favor, insira o segundo valor:")
 
     local valor2 = io.read()
-    print("Segundo valor: " .. valor2)
+    print(prefixo .. "Segundo valor: " .. valor2)
 
-    print("Para finalizar, escolha a operação:")
+    print(prefixo .. "Para finalizar, escolha a operação:")
     print("(+, -, *, ^, /)")
     local operation = io.read()
 
     if valor1 ~= nil and valor2 ~= nil and operation ~= nil then
-        print("Resultado:")
+        print(prefixo .. "Resultado:")
         
         local finalValue;
         if operation == "+" then
@@ -30,7 +30,7 @@ local function startCalculator()
         elseif operation == "/" then
             finalValue = valor1/valor2
         end
-        print(finalValue)
+        print(prefixo .. finalValue)
     else
         print("Um dos valores inseridos está incorreto!")
     end
