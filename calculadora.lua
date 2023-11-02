@@ -29,10 +29,12 @@ local function startCalculator()
             finalValue = valor1^valor2
         elseif operation == "/" then
             finalValue = valor1/valor2
+        else
+            print(prefixo .. "Aconteceu um erro nas operações!")
         end
         print(prefixo .. finalValue)
     else
-        print("Um dos valores inseridos está incorreto!")
+        print(prefixo .. "Um dos valores inseridos está incorreto!")
     end
 
 end
